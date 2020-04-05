@@ -1,0 +1,9 @@
+.menu-btn {
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    margin-left: 10px;
+}
+
+.menu-btn img {
+    width: 40px;
+}

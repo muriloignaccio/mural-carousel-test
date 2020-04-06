@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
 @import "reset.css";
+@import "header.css";
 
 * {
     box-sizing: border-box;
@@ -12,53 +13,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-div#mural {
-    display: block;
-}
-
-/* Header da página */
-
-header {
-    display: flex;
-    justify-content: space-between;
-}
-
-header .options {
-    display: flex;
-
-}
-
-header .options a {
-    align-items: center;
-    border: none;
-    background-color: #F70065;
-    border-radius: 50%;
-    display: flex;
-    margin: 10px;
-    padding: 10px;
-}
-
-header .options a img {
-    width: 25px;
-}
-
-header .options a span {
-    display: none;
-}
-
-header button.profile-icon {
-    background: rgba(0, 0, 0, 0);
-    border: 0;
-}
-
-header button.profile-icon img {
-    border-radius: 50%;
-    width: 50px;
-}
-
 /* Container dos cards */
 
-.feed {
+main .feed {
     margin: 0 auto;
     max-width: 600px;
     width: 100%;
@@ -113,15 +70,15 @@ header button.profile-icon img {
 
 /* Conteúdo do card */
 
-main {
+.card main {
     padding: 18px 0;
 }
 
-main .post-text {
+.card main .post-text {
     font-size: 14px;
 }
 
-main img.post-img {
+.card main img.post-img {
     border-radius: 8px;
     margin: 10px 0;
     width: 100%;
@@ -129,27 +86,27 @@ main img.post-img {
 
 /* Footer do card */
 
-footer {
+.card footer {
     align-items: center;
     display: flex;
     justify-content: space-between;
 }
 
-footer .post-info span {
+.card footer .post-info span {
     color: #999999;
     display: block;
     font-size: 14px;
 }
 
-footer .post-info span:first-child {
+.card footer .post-info span:first-child {
     padding-bottom: 3px;
 }
 
-footer .btn-group {
+.card footer .btn-group {
     display: flex;
 }
 
-footer .btn-group button {
+.card footer .btn-group button {
     align-items: center;
     border: none;
     background-color: #F70065;
@@ -162,24 +119,23 @@ footer .btn-group button {
     padding: 5px 10px;
 }
 
-footer .btn-group button img {
+.card footer .btn-group button img {
     padding-right: 4px;
 }
 
-footer .btn-group .btn-comment {
+.card footer .btn-group .btn-comment {
     margin-right: 8px;
 }
 
-.btn {
-    align-items: center;
-    border: none;
-    background-color: #F70065;
-    border-radius: 8px;
-    color: #FFF;
-    cursor: pointer;
-    display: flex;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 5px 10px;
-    text-decoration: none;
+/* *********** */
+/* MEDIA QUERY */
+/* *********** */
+
+@media (min-width: 768px) {
+
+    /* FOOTER DO CARD */
+
+    .card header .post-type {
+        font-size: 15px;
+    }
 }
